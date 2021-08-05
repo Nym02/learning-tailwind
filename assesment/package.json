@@ -1,0 +1,16 @@
+{
+  "name": "assesment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build:css": "postcss ./style/tailwind.css -o ./style/main.css",
+    "build:watch": "postcss ./style/tailwind.css -o ./style/main.css --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.2.7"
+  }
+}
