@@ -14,27 +14,91 @@
 
 <body class="bg-lightGray">
     <div>
-        <div class="container mx-auto">
-            <div class="bg-white mt-25">
+        <div class="container mx-auto px-5 relative">
+            <!-- responsive menu starts here -->
+            <div id="resMenu" class="w-60 h-full text-white bg-lightBlack fixed top-0 -left-112 opacity-0">
+                <div>
+                    <div class="absolute top-3 right-3">
+                        <span id="removeMenu" onclick="removeMenu()" class="p-2 bg-red"><i
+                                class="fas fa-times"></i></span>
+                    </div>
+                </div>
 
-                <div class=" flex">
+                <div>
+                    <div class="mt-4">
+                        <img src="/img/logo.png" class="mx-auto" alt="">
+                    </div>
+                </div>
+                <div class="mt-20 text-center">
+                    <ul>
+                        <li class="w-full py-2 my-5 hover:bg-red transition duration-300">
+                            <a class="font-bold" href="#">portfolio</a>
+                        </li>
+                        <li class="w-full py-2 my-5 hover:bg-red transition duration-300">
+                            <a class="font-bold" href="#">about me</a>
+                        </li>
+                        <li class="w-full py-2 my-5 hover:bg-red transition duration-300">
+                            <a class="font-bold" href="#">my blogs</a>
+                        </li>
+                        <li class="w-full py-2 my-5 hover:bg-red transition duration-300">
+                            <a class="font-bold" href="#">reviews</a>
+                        </li>
+                        <li class="w-full py-2 my-5 hover:bg-red transition duration-300">
+                            <a class="font-bold" href="#">contact me</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- responsive menu ends here -->
+            <div class="bg-white mt-25 md:mt-8">
+
+                <div class="flex">
                     <div class="border-r-2 border-lightGray">
-                        <img src="./img/logo.png" alt="">
+                        <div class="flex flex-col justify-between h-full w-full self-end pb-2">
+                            <div>
+                                <!-- website logo  -->
+                                <img src="./img/logo.png" alt="">
+                            </div>
+                            <div>
+                                <!-- social links  -->
+                                <div class="flex flex-col items-center text-gray">
+                                    <div class="mb-3">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                    </div>
+                                    <div class="mb-3">
+                                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                                    </div>
+                                    <div class="mb-3">
+                                        <a href="#"><i class="fab fa-behance-square"></i></a>
+                                    </div>
+                                    <div class="mb-3">
+                                        <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                                    </div>
+                                    <div class="mb-3">
+                                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="w-full py-6">
                         <!-- main container of content  -->
                         <div class="w-11/12 mx-auto">
 
+
                             <!-- navigation section starts here  -->
                             <div class="w-full flex justify-between">
                                 <div class="flex space-x-3">
+
+
                                     <!-- responsive menu bars  -->
                                     <div class="block xl:hidden 2xl:hidden">
-                                        <span><i class="fas fa-bars"></i></span>
+                                        <span onclick="toggleMenu()" class="" id="bar"><i
+                                                class="fas fa-bars"></i></span>
                                     </div>
                                     <!-- responsive menu bars  -->
                                     <!-- Main menu starts here  -->
-                                    <nav>
+                                    <nav class="hidden md:hidden lg:hidden xl:block 2xl:block">
                                         <ul class="font-bold flex justify-center space-x-7 text-lightBlack">
                                             <li
                                                 class="border-b-2 border-transparent hover:border-black transition duration-300">
@@ -73,39 +137,80 @@
                             <!-- navigation section ends here  -->
                             <!-- Main content starts here  -->
                             <div class="py-4">
-                                <div class="flex xl:justify-center 2xl:justify-between 2xl:items-center">
-                                    <div class="font-bold text-black">
+
+                                <div
+                                    class="flex flex-col-reverse sm:flex-col-reverse md:flex-col-reverse xl:justify-center 2xl:justify-between 2xl:items-center">
+                                    <div class="font-bold text-black text-center sm:text-center md:text-center md:mt-9">
+
                                         <div>
-                                            <h4 class="text-2xl">Hi There,</h4>
+                                            <h4
+                                                class="text-sm sm:text-base md:text-base lg:text-xl xl:text-xl 2xl:text-xl">
+                                                Hi There,</h4>
                                         </div>
                                         <div>
-                                            <h1 class="text-8xl font-bold tracking-tighter">I am Ven<span
-                                                    class="text-red">i</span>ssa
+                                            <h1
+                                                class="text-2xl sm:4xl md:text-5xl lg:text-8xl xl:text-8xl 2xl:text-8xl font-bold tracking-tighter">
+                                                I am Ven<span class="text-red">i</span>ssa
                                             </h1>
                                         </div>
                                         <div>
-                                            <h2 class="text-5xl tracking-tighter font-semibold">I am designer during
+                                            <h2
+                                                class="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-5xl 2xl:text-5xl tracking-tighter font-semibold">
+                                                I am
+                                                designer during
                                                 daytime</h2>
                                         </div>
                                         <div>
-                                            <h3 class="text-3xl leading-10 font-semibold mt-2">& work with batman during
+                                            <h3
+                                                class="text-base sm:text-lg md:text-xl lg:text-3xl xl:text-3xl 2xl:text-3xl leading-10 font-semibold mt-2 md:mt-0">
+                                                & work
+                                                with
+                                                batman during
                                                 nights.</h3>
                                         </div>
-                                        <div class="mt-9">
+                                        <div class="mt-2 sm:mt-3 md:mt-4 md:mb-4 sm:mb-3 lg:mt-9 xl:mt-9 2xl:mt-9">
                                             <a class="bg-red text-white px-8 py-3 inline-block font-normal capitalize"
                                                 href="#">ask
                                                 me how</a>
                                         </div>
                                     </div>
                                     <div>
-                                        <img src="/img/hero.png" class="w-9/12" alt="">
+                                        <img src="/img/hero.png"
+                                            class="w-3/12 sm:w-4/12 md:w-5/12 lg:w-9/12 xl:w-9/12 2xl:w-9/12 mx-auto sm:mx-auto md:mx-auto"
+                                            alt="">
                                     </div>
                                 </div>
                             </div>
                             <!-- Main content ends here -->
 
                             <!-- Contact details  -->
-                            <div>
+                            <div
+                                class="pb-5 flex space-x-3 sm:flex-col  md:space-x-8 lg:space-x-16 xl:space-x-16 2xl:space-x-16 text-black">
+                                <div class="border-r border-gray pr-10 md:pr-4">
+                                    <div>
+                                        <h1 class="font-bold text-lg md:text-lg lg:text-xl xl:text-xl 2xl:text-xl mb-2">
+                                            Email</h1>
+                                    </div>
+                                    <div>
+                                        <p class="text-lg md:text-base font-normal">venissa@gotham.com</p>
+                                    </div>
+                                </div>
+                                <div class="border-r border-gray pr-10 md:pr-4">
+                                    <div>
+                                        <h1 class="font-bold text-xl md:text-lg mb-2">Phone</h1>
+                                    </div>
+                                    <div>
+                                        <p class="text-lg md:text-base font-normal">+190-300-444-5555</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <h1 class="font-bold text-xl md:text-lg mb-2">Location</h1>
+                                    </div>
+                                    <div>
+                                        <p class="text-lg md:text-base font-normal">Gotham City, Arkham</p>
+                                    </div>
+                                </div>
 
                             </div>
                             <!-- Contact details  -->
@@ -117,6 +222,7 @@
         </div>
     </div>
 
+    <script src="/app.js"></script>
 </body>
 
 </html>
