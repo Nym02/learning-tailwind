@@ -4,13 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build:css": "postcss ./style/tailwind.css -o ./style/main.css",
-    "build:watch": "postcss ./style/tailwind.css -o ./style/main.css --watch"
+    "build:css": "postcss ./assets/style/tailwind.css -o ./assets/style/main.css",
+    "build:watch": "postcss ./assets/style/tailwind.css -o ./assets/style/main.css --watch"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.1",
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.2.7"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.3.3"
   }
 }
