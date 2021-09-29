@@ -1,11 +1,18 @@
 const bars = document.querySelectorAll("#first-bar");
 const mainBar = document.querySelector("#main-bar");
-
-// console.log(bars);
-
-// bars.forEach((bar) => {
-//   console.log(bar);
-// });
+const menu = document.querySelector("#menu");
+const transformation = document.querySelector("#menu ul li #transformation");
+const transformSubMenu = document.querySelector(
+  "#menu ul li #transformSubMenu"
+);
+const transformSubMenuBack = document.querySelector(
+  "#menu #transformSubMenu #transformSubMenuBack"
+);
+const solutions = document.querySelector("#menu ul li #solutions");
+const solutionSubMenu = document.querySelector("#menu ul li #solutionSubMenu");
+const solutionSubMenuBack = document.querySelector(
+  "#menu #solutionSubMenu #solutionSubMenuBack"
+);
 
 mainBar.addEventListener("click", (e) => {
   if (mainBar.classList.contains("cc")) {
@@ -38,3 +45,96 @@ mainBar.addEventListener("click", (e) => {
     mainBar.classList.add("cc");
   }
 });
+
+mainBar.addEventListener("click", (e) => {
+  if (menu.classList.contains("-left-full")) {
+    menu.classList.remove("-left-full");
+    menu.classList.add("left-0");
+  } else {
+    menu.classList.remove("left-0");
+    menu.classList.add("-left-full");
+  }
+});
+
+// first item sub menu
+
+transformation.addEventListener("click", (e) => {
+  // transformSubMenu.style.right = "0px";
+  if (
+    transformSubMenu.classList.contains("-right-full") &&
+    transformSubMenu.classList.contains("invisible")
+  ) {
+    transformSubMenu.classList.remove("invisible");
+    transformSubMenu.classList.remove("-right-full");
+
+    transformSubMenu.classList.add("visible");
+    transformSubMenu.classList.add("right-0");
+  }
+});
+
+transformSubMenuBack.addEventListener("click", (e) => {
+  if (
+    transformSubMenu.classList.contains("right-0") &&
+    transformSubMenu.classList.contains("visible")
+  ) {
+    transformSubMenu.classList.remove("visible");
+    transformSubMenu.classList.remove("right-0");
+
+    transformSubMenu.classList.add("invisible");
+    transformSubMenu.classList.add("-right-full");
+  }
+});
+// first item sub menu
+// 2nd item sub menu
+
+solutions.addEventListener("click", (e) => {
+  // transformSubMenu.style.right = "0px";
+  if (
+    solutionSubMenu.classList.contains("-right-full") &&
+    solutionSubMenu.classList.contains("invisible")
+  ) {
+    solutionSubMenu.classList.remove("invisible");
+    solutionSubMenu.classList.remove("-right-full");
+
+    solutionSubMenu.classList.add("visible");
+    solutionSubMenu.classList.add("right-0");
+  }
+});
+solutionSubMenuBack.addEventListener("click", (e) => {
+  if (
+    solutionSubMenu.classList.contains("right-0") &&
+    solutionSubMenu.classList.contains("visible")
+  ) {
+    solutionSubMenu.classList.remove("visible");
+    solutionSubMenu.classList.remove("right-0");
+
+    solutionSubMenu.classList.add("invisible");
+    solutionSubMenu.classList.add("-right-full");
+  }
+});
+// sub menu of 2nd item sub menu
+
+const expandSolutionSubMenu = (id2) => {
+  // const solutionItemOne = document.querySelector(`#${id2}`);
+  const solutionItemSubMenu = document.querySelector(`#${id2}`);
+
+  if (
+    solutionItemSubMenu.classList.contains("-right-full") &&
+    solutionItemSubMenu.classList.contains("invisible")
+  ) {
+    solutionItemSubMenu.classList.remove("invisible");
+    solutionItemSubMenu.classList.remove("-right-full");
+
+    solutionItemSubMenu.classList.add("visible");
+    solutionItemSubMenu.classList.add("right-0");
+  } else {
+    solutionItemSubMenu.classList.remove("visible");
+    solutionItemSubMenu.classList.remove("right-0");
+
+    solutionItemSubMenu.classList.add("invisible");
+    solutionItemSubMenu.classList.add("-right-full");
+  }
+};
+
+// sub menu of 2nd item sub menu
+// 2nd item sub menu
